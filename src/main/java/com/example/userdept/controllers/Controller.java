@@ -20,13 +20,11 @@ public class Controller {
         List<User> result = repository.findAll();
         return result;
     }
-
     @GetMapping(value = "/{id}")
     public User findById(@PathVariable Long id){
         User result = repository.findById(id).get();
         return result;
     }
-
     @PostMapping
     public User findById(@RequestBody User user){
         User result = repository.save(user);
